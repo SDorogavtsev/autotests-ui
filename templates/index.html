@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тренировка: Картинки, ссылки и поля</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; max-width: 800px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input[type="text"], input[type="email"], select, textarea { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { padding: 10px 20px; background-color: #007BFF; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h1>Работа с медиа, ссылками и формами</h1>
+
+    <!-- РАЗДЕЛ: ССЫЛКИ -->
+    <h2>1. Практика работы со ссылками</h2>
+    <p>Ссылки могут открываться в текущей вкладке или в новой:</p>
+    <ul>
+        <li><a href="https://ya.ru" target="_blank">Открыть Яндекс в новой вкладке</a> (атрибут target="_blank")</li>
+        <li><a href="https://htmlbook.ru">Открыть HTMLbook в этой же вкладке</a></li>
+    </ul>
+
+    <!-- РАЗДЕЛ: КАРТИНКИ -->
+    <h2>2. Практика работы с изображениями</h2>
+    <p>Ниже вставлена демонстрационная картинка из интернета. Замените адрес в атрибуте <code>src</code> на свой путь к файлу, если хотите загрузить локальное фото.</p>
+    <!-- Картинка-заглушка с котиком -->
+    <img src="https://placekitten.com" alt="Пример изображения: милый котик" width="400" height="250">
+    <p><i>Совет: Всегда указывайте атрибут <code>alt</code> с описанием картинки на случай, если она не загрузится.</i></p>
+
+    <!-- РАЗДЕЛ: ПОЛЯ И ФОРМЫ -->
+    <h2>3. Практика работы с полями ввода (Формы)</h2>
+    <p>Заполните тестовую анкету, чтобы проверить, как работают разные типы полей:</p>
+
+    <form action="#" method="POST">
+
+        <!-- Текстовое поле -->
+        <div class="form-group">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" placeholder="Введите ваше имя" required>
+        </div>
+
+        <!-- Поле для Email -->
+        <div class="form-group">
+            <label for="useremail">Электронная почта:</label>
+            <input type="email" id="useremail" name="useremail" placeholder="example@mail.com">
+        </div>
+
+        <!-- Выпадающий список -->
+        <div class="form-group">
+            <label for="level">Ваш уровень в HTML:</label>
+            <select id="level" name="level">
+                <option value="beginner">Новичок (только учусь)</option>
+                <option value="middle">Уверенный (знаю базовые теги)</option>
+                <option value="pro">Профи (пишу код закрытыми глазами)</option>
+            </select>
+        </div>
+
+        <!-- Переключатели (Radio buttons) - можно выбрать только один вариант -->
+        <div class="form-group">
+            <label>Какая тема оформления вам нравится больше?</label>
+            <input type="radio" id="theme-light" name="theme" value="light" checked>
+            <label style="display:inline; font-weight:normal;" href="theme-light">Светлая</label>
+            <br>
+            <input type="radio" id="theme-dark" name="theme" value="dark">
+            <label style="display:inline; font-weight:normal;" href="theme-dark">Темная</label>
+        </div>
+
+        <!-- Флажки (Checkboxes) - можно выбрать несколько вариантов -->
+        <div class="form-group">
+            <label>Что вы хотите изучить дальше?</label>
+            <input type="checkbox" id="learn-css" name="learn" value="css">
+            <label style="display:inline; font-weight:normal;" href="learn-css">Стили (CSS)</label>
+            <br>
+            <input type="checkbox" id="learn-js" name="learn" value="js">
+            <label style="display:inline; font-weight:normal;" href="learn-js">Логику (JavaScript)</label>
+        </div>
+
+        <!-- Большое текстовое поле -->
+        <div class="form-group">
+            <label for="comments">Комментарий или заметка:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Напишите здесь что-нибудь..."></textarea>
+        </div>
+
+        <!-- Кнопка отправки формы -->
+        <button type="submit">Отправить форму</button>
+
+    </form>
+
+</body>
+</html>
