@@ -20,5 +20,6 @@ with sync_playwright() as playwright:
 
     dashboard_page = page.get_by_test_id('dashboard-toolbar-title-text')
     expect(dashboard_page).to_be_visible()
+    expect(dashboard_page).to_have_text('Dashboard')
 
     page.wait_for_timeout(5000)
