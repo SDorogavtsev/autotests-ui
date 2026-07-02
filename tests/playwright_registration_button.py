@@ -22,4 +22,4 @@ with sync_playwright() as playwright:
 
     expect(registration_button).not_to_be_disabled()
 
-    page.wait_for_timeout(10000)
+    page.wait_for_timeout(5000)
